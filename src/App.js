@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Typography, Box, Avatar } from "@mui/material";
+import React from "react";
+import "./App.css";
+import { Forecast } from "./components/Forecast/Forecast";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <header>
+        <Box
+          sx={{ display: "flex", alignItems: "center", textAlign: "center" }}
         >
-          Learn React
-        </a>
+          <Typography
+            sx={{
+              minWidth: 100,
+              justifyContent: "center",
+              fontSize: "2rem",
+              fontWeight: 500,
+            }}
+          >
+            Weather App
+          </Typography>
+          <Avatar>☀️</Avatar>
+        </Box>
       </header>
+      <main>
+        <Forecast />
+      </main>
+      <footer>Created by Jacqui Cope ⛈</footer>
     </div>
   );
 }
