@@ -7,6 +7,7 @@ export const Forecast = () => {
   const [unit, setUnit] = useState("metric");
   const [responseObj, setResponseObj] = useState({});
   const encodedCity = encodeURIComponent(city);
+
   function getForecast(e) {
     e.preventDefault();
     const options = {
@@ -17,10 +18,6 @@ export const Forecast = () => {
       },
     };
 
-    // fetch(
-    //   "https://community-open-weather-map.p.rapidapi.com/weather?q=Sydney",
-    //   options
-    // )
     fetch(
       `https://community-open-weather-map.p.rapidapi.com/weather?q=${encodedCity}`,
       options
@@ -28,8 +25,8 @@ export const Forecast = () => {
       .then((response) => response.json())
       .then((response) => {
         setResponseObj(response);
-      });
-    // .catch((err) => console.error(err));
+      })
+      .catch((err) => console.error(err));
   }
 
   return (
