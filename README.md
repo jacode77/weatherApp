@@ -12,6 +12,7 @@ The app is simple however has opportunities to add further features to it to mak
 
 ## Technologies
 
+- React
 - JavaScript
 - HTML
 - CSS
