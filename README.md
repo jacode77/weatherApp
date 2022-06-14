@@ -25,4 +25,4 @@ This project has been created using React. To run install locally:
 2. Clone the fork to your local development environment
 3. Change to the project directory
 4. Install dependencies: `npm install`
-5. Run the application: `yarn start`
+5. Run the application: `npm start`
